@@ -1,20 +1,14 @@
 import { NavigateFunction } from 'react-router-dom'
 
-export enum PaymentMethods {
-  CREDIT = 'credit',
-  DEBIT = 'debit',
-  CASH = 'cash',
-}
-
 export interface OrderInfo {
-  cep: string
+  cep: number
   street: string
   number: string
   fullAddress: string
   neighborhood: string
   city: string
   state: string
-  paymentMethod: PaymentMethods
+  paymentMethod: 'credit' | 'debit' | 'cash'
 }
 
 export enum ActionTypes {
